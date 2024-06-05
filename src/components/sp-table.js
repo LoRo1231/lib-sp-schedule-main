@@ -9,13 +9,12 @@ function SPTable({ jobList }){
     return(
 
         <Container>
-         <Table striped bordered hover variant="dark text-center mt-4">
+            <Table variant="dark text-center mt-4 hover striped">
                 <thead>
                     <Row className='h5 dflex align-items-center'>
-                        <Col sm={1}> Job # </Col>
-                        <Col sm={2}> Film & Screen </Col>
-                        <Col sm={2}> Customer Name </Col>
-                        <Col sm={2}> Description </Col>
+                        <Col sm={2}> Job # </Col>
+                        <Col sm={3}> Customer Name </Col>
+                        <Col sm={3}> Description </Col>
                         <Col sm={1}> QTY </Col>
                         <Col sm={1}> Screens </Col>
                         <Col sm={1}> Firm? </Col>
@@ -26,37 +25,19 @@ function SPTable({ jobList }){
                         {jobList.map(job =>
 
                         <Row>
-                            <Col sm={1}> {job.jobNumber} </Col>
-                            <Col sm={1}> {job.filmTrue}
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value={AddJob.filmTrue} id="defaultCheck1"/>
-                                        <label class="form-check-label" for="defaultCheck1">
-                                            Film
-                                        </label>
-                                        </div>
-                            </Col>
-                            <Col sm={1}> {job.screenTrue}
-                                    <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value={AddJob.screenTrue} id="defaultCheck2"/>
-                                    <label class="form-check-label" for="defaultCheck2">
-                                        Screen
-                                    </label>
-                                </div>
-                            </Col>
-                            <Col sm={2}> {job.customerName} </Col>
-                            <Col sm={2}> {job.description} </Col>
+                            <Col sm={2}> {job.jobNumber} </Col> 
+                            <Col sm={3}> {job.customerName} </Col>
+                            <Col sm={3}> {job.description} </Col>
                             <Col sm={1}> {job.qty} </Col>
                             <Col sm={1}> {job.screens} </Col>
-                            <Col sm={1}> {job.firmTrue} 
-                                <div class="input-group mb-3">
-                                    <select class="form-select" id="inputGroupSelect01">
-                                        <option selected> </option>
-                                        <option value={AddJob.firmTrue}> </option>
-                                        <option value={AddJob.firmFalse}> </option>
-                                    </select>
-                                 </div>
-                            </Col>
+                            <Col sm={1}> {job.firmTrue} </Col>
                             <Col sm={1}> {job.dueDate} </Col>
+                        </Row>)}
+                        {jobList.map(job =>
+                        <Row>
+                            <Col> 
+                                {job.jobNotes}
+                            </Col>
                         </Row>)}
                     </tbody>
             </Table>
