@@ -15,3 +15,12 @@ code {
 .left {
   text-align: left;
 }
+
+.noteColor {
+  background-color: #ECECEC;
+  color: black
+}
+
+.theadColor {
+  background-color: #54B948;
+}

@@ -84,9 +84,22 @@ function AddJob({ submitJob }){
                     </Col>
                 </Row>
                 <Row>
-                    <Col class="form-floating">
+                    <Col sm={12} class="form-floating">
                         <label for="floatingTextarea"> Job Notes </label>
-                        <textarea class="form-control" placeholder="Add notes here" id="jonNotes" value={jobNotes} onChange={(event) => setJobNotes(event.target.value)}></textarea>
+                        <textarea class="form-control" placeholder="Add notes here" id="jobNotes" value={jobNotes} onChange={(event) => setJobNotes(event.target.value)}></textarea>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col sm={2} class="mt-3">
+                        <input class="form-check-input p-2" type="checkbox" role="switch" id="filmReady"/>
+                        <label class="form-check-label" for="flexSwitchCheckDefault"> Film Ready </label>
+                    </Col>
+                    <Col sm={2} class="mt-3">
+                        <input class="form-check-input p-2" type="checkbox" role="switch" id="screenBurned"/>
+                        <label class="form-check-label" for="flexSwitchCheckDefault"> Screen(s) Burned </label>
+                    </Col>
+                    <Col sm={8}>
+                        
                     </Col>
                 </Row>
                 

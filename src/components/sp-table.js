@@ -9,7 +9,7 @@ function SPTable({ jobList }){
     return(
 
         <Container>
-            <Table variant="dark text-center mt-4 hover striped">
+            <Table variant="dark text-center mt-4">
                 <thead>
                     <Row className='h5 dflex align-items-center'>
                         <Col sm={2}> Job # </Col>
@@ -32,13 +32,22 @@ function SPTable({ jobList }){
                             <Col sm={1}> {job.screens} </Col>
                             <Col sm={1}> {job.firmDate} </Col>
                             <Col sm={1}> {job.dueDate} </Col>
-                                <Row>
-                                    <Col class=" container badge text-bg-secondary"> 
-                                        {job.jobNotes}
-                                     </Col>
-                                </Row>
+                            <Col sm={12}> 
+                               <p class="container noteColor left"> {job.jobNotes} </p>
+                            </Col>
+                            <Col sm={2}>
+                                <input class="form-check-input m-3" type="checkbox" role="switch" id="filmReady"/>
+                                <label class="form-check-label mt-3" for="flexSwitchCheckDefault"> Film Ready </label>
+                            </Col>
+                            <Col sm={2}>
+                                <input class="form-check-input m-3" type="checkbox" role="switch" id="screenBurned"/>
+                                <label class="form-check-label mt-3" for="flexSwitchCheckDefault"> Screen(s) Burned </label>
+                            </Col>
+                            <Col sm={8}>
+                                
+                            </Col>
                         </Row>)}
-                        
+                       
                     </tbody>
             </Table>
          </Container>
