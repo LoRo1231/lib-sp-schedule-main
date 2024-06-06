@@ -3,7 +3,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Table from 'react-bootstrap/Table';
 import Container from 'react-bootstrap/Container';
-import AddJob from './add-form';
+
 
 function SPTable({ jobList }){
     return(
@@ -30,15 +30,15 @@ function SPTable({ jobList }){
                             <Col sm={3}> {job.description} </Col>
                             <Col sm={1}> {job.qty} </Col>
                             <Col sm={1}> {job.screens} </Col>
-                            <Col sm={1}> {job.firmTrue} </Col>
+                            <Col sm={1}> {job.firmDate} </Col>
                             <Col sm={1}> {job.dueDate} </Col>
+                                <Row>
+                                    <Col class=" container badge text-bg-secondary"> 
+                                        {job.jobNotes}
+                                     </Col>
+                                </Row>
                         </Row>)}
-                        {jobList.map(job =>
-                        <Row>
-                            <Col> 
-                                {job.jobNotes}
-                            </Col>
-                        </Row>)}
+                        
                     </tbody>
             </Table>
          </Container>

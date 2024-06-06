@@ -13,7 +13,7 @@ function AddJob({ submitJob }){
     const [description, setDescription] = useState('');
     const [qty, setQTY] = useState('');
     const [screens, setScreens] = useState('');
-    const [isFirm, setIsFirm] = useState('');
+    const [firmDate, setFirmDate] = useState('');
     const [dueDate, setDueDate] = useState('');
     const [jobNotes, setJobNotes] = useState('');
 
@@ -32,7 +32,7 @@ function AddJob({ submitJob }){
             description: description,
             qty: qty,
             screens: screens,
-            isFirm: isFirm,
+            firmDate: firmDate,
             dueDate: dueDate,
             jobNotes: jobNotes,
         }
@@ -44,7 +44,7 @@ function AddJob({ submitJob }){
         setDescription('');
         setQTY('');
         setScreens('');
-        setIsFirm('');
+        setFirmDate('');
         setDueDate('');
         setJobNotes('');
 
@@ -75,14 +75,8 @@ function AddJob({ submitJob }){
                         <Form.Control id='screens' value={screens} onChange={(event) => setScreens(event.target.value)}/>
                     </Col>
                     <Col sm={1}>
-                        <label> Firm? </label> 
-                        <div class="input-group mb-3">
-                            <select class="form-select" id="firmDateInput">
-                                <option selected value={isFirm} onChange={(event) => setIsFirm(event.target.value)}> </option>
-                                <option value='Yes'> Yes </option>
-                                <option value='No'> No </option>
-                            </select>
-                        </div>
+                        <label> Firm? </label>
+                        <Form.Control id='firmDate' value={firmDate} onChange={(event) => setFirmDate(event.target.value)}/>
                     </Col>
                     <Col sm={1}>
                         <label> Due Date </label>
