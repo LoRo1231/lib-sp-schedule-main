@@ -3,9 +3,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Table from 'react-bootstrap/Table';
 import Container from 'react-bootstrap/Container';
-import FilmCheckbox from './filmPrintedCheck';
-import ScreenCheckbox from './screenBurnedCheck';
-
+import ScreenButton from './screenButton';
+import FilmButton from './filmButton';
 
 function SPTable({ jobList }){
     return(
@@ -37,15 +36,15 @@ function SPTable({ jobList }){
                                 <Col sm={1}> {job.firmDate} </Col>
                                 <Col sm={1}> {job.dueDate} </Col>
                                 <Col sm={2}> <button type="button" class="btn btn-success"> Complete </button> </Col>
-                                <Col sm={2}>
-                                    <FilmCheckbox/>
+
+                                <Col sm={1}>
+                                    <FilmButton/>
                                 </Col>
-                                <Col sm={2}>
-                                    <ScreenCheckbox/>
+                                <Col sm={1}>
+                                    <ScreenButton/>
                                 </Col>
-                                <Col sm={8}>
-                                    
-                                </Col>
+                                <Col sm={10}> </Col>
+
                                 <Col sm={12}> 
                                 <p class="container noteColor left m-3"> {job.jobNotes} </p>
                                 </Col>

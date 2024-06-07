@@ -5,8 +5,6 @@ import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
 import { useState } from 'react';
 import SuccessAlert from './success-alert';
-import FilmCheckbox from './filmPrintedCheck';
-import ScreenCheckbox from './screenBurnedCheck';
 
 function AddJob({ submitJob }){
 
@@ -85,17 +83,7 @@ function AddJob({ submitJob }){
                         <Form.Control id='dueDate' type='date' value={dueDate} onChange={(event) => setDueDate(event.target.value)}/>
                     </Col>
                 </Row>
-                <Row>
-                    <Col sm={2} class="mt-2">
-                        <FilmCheckbox/>
-                    </Col>
-                    <Col sm={2} class="mt-2">
-                        <ScreenCheckbox/>
-                    </Col>
-                    <Col sm={8}>
-                        
-                    </Col>
-                </Row>
+               
                 <Row>
                     <Col sm={12} class="form-floating">
                         <label for="floatingTextarea"> Job Notes </label>
