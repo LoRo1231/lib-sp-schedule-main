@@ -24,3 +24,11 @@ code {
 .theadColor {
   background-color: #54B948;
 }
+
+.checkBoxRight {
+  margin-right: 20px;
+}
+
+.tableMarginBtm {
+  margin-bottom: 20px;
+}
